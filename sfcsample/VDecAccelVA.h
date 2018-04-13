@@ -69,12 +69,7 @@ public:
     bool                DecodePicture();
     void                bind_buffer(uint8_t* base);
   
-    // VDecAccelVA interface
-#ifdef DECODE_FEATURE_GRALLOC
-    virtual void        SetGrallocHandle(
-                            gralloc_module_t* module,
-                            alloc_device_t* device);
-#endif
+
 protected:
     // GfxSurfaceAccess interface
     uint32_t    get_width(VASurfaceID id);

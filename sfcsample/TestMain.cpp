@@ -32,5 +32,5 @@ int main(int argc, char** argv)
     VDecAccelVAImpl VideoProc;
 
     VideoProc.Open();
-    VideoProc.DecodePicture();	
+    VideoProc.DecodePicture();
 }

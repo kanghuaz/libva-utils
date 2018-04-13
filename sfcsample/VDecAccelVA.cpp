@@ -800,7 +800,7 @@ int mvaccel::VDecAccelVAImpl::create_resources()
     // Prepare VAProcPipelineParameterBuffer for decode
     VAProcPipelineParameterBuffer buffer;
     memset(&buffer, 0, sizeof(buffer));
-    m_rectSrc = { 0, 0, m_DecodeDesc.width, m_DecodeDesc.height};
+    m_rectSrc = { 0, 0, (uint16_t)m_DecodeDesc.width, (uint16_t)m_DecodeDesc.height};
     buffer.surface_region = &m_rectSrc;
     buffer.output_region = &m_rectSFC;
     buffer.additional_outputs = (VASurfaceID*)&(m_sfcIDs[0]);
